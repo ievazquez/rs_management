@@ -1,0 +1,105 @@
+/**
+ * Estilos para vista previa de publicaciones
+ */
+.post-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.preview-empty {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 10px;
+  color: #999;
+  border: 2px dashed #ddd;
+}
+
+.preview-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.preview-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.preview-icon {
+  font-size: 32px;
+}
+
+.preview-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.preview-time {
+  font-size: 12px;
+  color: #999;
+}
+
+.preview-handle {
+  font-size: 14px;
+  color: #666;
+}
+
+.preview-content p {
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.preview-image {
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.preview-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.preview-placeholder {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  color: #999;
+  border: 2px dashed #ddd;
+}
+
+.preview-warning {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #fff3cd;
+  color: #856404;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Estilos específicos por plataforma */
+.preview-card.facebook .preview-header {
+  border-bottom-color: #1877f2;
+}
+
+.preview-card.instagram .preview-header {
+  border-bottom-color: #e4405f;
+}
+
+.preview-card.twitter .preview-header {
+  border-bottom-color: #1da1f2;
+}
