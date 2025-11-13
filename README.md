@@ -351,16 +351,55 @@ docker-compose logs celery_worker
 
 ## Desarrollo
 
-### Ejecutar tests
+### Ejecutar Tests
+
+#### Backend (Python + pytest)
 ```bash
-# Backend
 cd backend
+
+# Instalar dependencias de testing
+pip install -r requirements-dev.txt
+
+# Ejecutar todos los tests
 pytest
 
-# Frontend
-cd frontend
-npm test
+# Con cobertura de código
+pytest --cov=app --cov-report=html
+
+# Tests específicos
+pytest tests/test_routes/test_auth.py
+pytest tests/test_models/
 ```
+
+**Cobertura de Tests del Backend:**
+- ✅ Modelos de base de datos (User, SocialAccount, Post)
+- ✅ Endpoints de autenticación (registro, login, JWT)
+- ✅ Endpoints de publicaciones (CRUD, programación)
+- ✅ Servicios OAuth (Facebook, Instagram, Twitter)
+- ✅ Tareas de Celery (publicación programada)
+- ✅ Utilidades de autenticación (hashing, tokens)
+
+#### Frontend (React + Jest)
+```bash
+cd frontend
+
+# Ejecutar todos los tests
+npm test
+
+# Con cobertura
+npm test -- --coverage
+
+# Tests específicos
+npm test -- Login.test.js
+```
+
+**Cobertura de Tests del Frontend:**
+- ✅ Servicios API (auth, social, posts)
+- ✅ Componentes (PostPreview, Layout)
+- ✅ Páginas (Login, Dashboard)
+- ✅ Context (AuthContext)
+
+Ver [TESTING.md](TESTING.md) para guía completa de testing.
 
 ### Ver documentación API
 Visita http://localhost:8000/docs para ver la documentación interactiva de Swagger
