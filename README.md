@@ -45,7 +45,9 @@ rs_management/
 │   │   ├── config.py        # Configuración
 │   │   ├── database.py      # Conexión a base de datos
 │   │   └── main.py          # Punto de entrada
+│   ├── tests/               # Unit tests (pytest)
 │   ├── requirements.txt
+│   ├── requirements-dev.txt
 │   ├── Dockerfile
 │   └── .env.example
 ├── frontend/
@@ -55,14 +57,27 @@ rs_management/
 │   │   ├── services/        # Servicios API
 │   │   ├── context/         # Context providers
 │   │   ├── styles/          # Estilos CSS
+│   │   ├── __tests__/       # Unit tests (Jest)
 │   │   ├── App.js
 │   │   └── index.js
 │   ├── public/
 │   ├── package.json
 │   └── Dockerfile
+├── docs/                    # Documentación técnica
+│   └── architecture-overview.md
 ├── docker-compose.yml
-└── README.md
+├── README.md
+├── DIAGRAMS.md             # Diagramas técnicos (Mermaid)
+├── API_SPECS.md            # Especificaciones de APIs
+└── TESTING.md              # Guía de testing
 ```
+
+## Documentación Técnica
+
+- **[DIAGRAMS.md](DIAGRAMS.md)** - Diagramas de arquitectura, flujos y secuencias (Mermaid)
+- **[API_SPECS.md](API_SPECS.md)** - Especificaciones detalladas de APIs de Facebook, Instagram y Twitter
+- **[TESTING.md](TESTING.md)** - Guía completa de testing y cobertura
+- **[docs/architecture-overview.md](docs/architecture-overview.md)** - Resumen ejecutivo de arquitectura
 
 ## Requisitos Previos
 
